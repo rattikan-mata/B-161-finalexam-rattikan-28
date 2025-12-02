@@ -1,4 +1,3 @@
-using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -8,6 +7,7 @@ public class Player : MonoBehaviour
     private float jumpForce = 10f;
     private bool isInvulnerable = false;
 
+    //Properties
     public float MoveSpeed { get; private set; }
     public bool IsInvulnerable { get; private set; }
 
@@ -31,12 +31,13 @@ public class Player : MonoBehaviour
 
     public void SetMoveSpeed(float newSpeed)
     {
-        //Log ปรับความเร็ว
+        Debug.Log("Speed Increase!");
     }
 
     public void SetInvulnerability(bool isEnabled)
     {
-        //Log เปิด/ปิดอมตะ
+        isEnabled = true;
+        Debug.Log("Invulnerability Chance!");
     }
 
     public void OnTriggerEnter2D(Collider2D other)

@@ -2,9 +2,14 @@ using UnityEngine;
 
 public class SpeedBoost : PowerUpBase
 {
+    private float newSpeed;
     public override void ApplyEffect(Player player)
     {
-        throw new System.NotImplementedException();
+        if (!IsEffectActive)
+        {
+            
+            Player.SetMoveSpeed(float newSpeed)
+        }
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

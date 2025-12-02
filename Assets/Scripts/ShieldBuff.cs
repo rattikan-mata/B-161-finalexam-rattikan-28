@@ -2,9 +2,13 @@ using UnityEngine;
 
 public class ShieldBuff : PowerUpBase
 {
+    private bool isEnable;
     public override void ApplyEffect(Player player)
     {
-        throw new System.NotImplementedException();
+        if (!IsEffectActive)
+        {
+            Player.SetInvulnerability(bool isEnabled);
+        }
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
