@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -5,16 +6,18 @@ public class Player : MonoBehaviour
     // public Fields
     private float moveSpeed = 5f;
     private float jumpForce = 10f;
+    private bool isInvulnerable = false;
+
+    public float MoveSpeed { get; private set; }
+    public bool IsInvulnerable { get; private set; }
 
     private Rigidbody2D rb;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         float moveInput = Input.GetAxisRaw("Horizontal");
@@ -24,5 +27,30 @@ public class Player : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
+    }
+
+    public void SetMoveSpeed(float newSpeed)
+    {
+        //Log ปรับความเร็ว
+    }
+
+    public void SetInvulnerability(bool isEnabled)
+    {
+        //Log เปิด/ปิดอมตะ
+    }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        
+    }
+
+    public void Move()
+    {
+        
+    }
+
+    public void Jump()
+    {
+
     }
 }

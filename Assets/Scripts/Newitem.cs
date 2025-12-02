@@ -1,7 +1,12 @@
 using UnityEngine;
 
-public class Newitem : MonoBehaviour
+public class Newitem : PowerUpBase
 {
+    public override void ApplyEffect(Player player)
+    {
+        throw new System.NotImplementedException();
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
